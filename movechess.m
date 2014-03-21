@@ -1,6 +1,6 @@
 function newchess=movechess(tempchess,thismove)
 m=thismove;
-chess=rot90(log2(tempchess),m); % everything going down
+chess=rot90(tempchess,m); % everything going down
 %% move and add
 for k=3:-1:1
     for i=3:-1:1
@@ -28,5 +28,5 @@ for i=1:4
     end
 end
 
-newchess=rot90(2.^chess,-m); % turn it back
+newchess=rot90(chess,-m); % turn it back
 end

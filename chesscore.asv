@@ -3,7 +3,7 @@ tempchess=(tempchess);
 chess_max = max(tempchess(:));
 chess_space = sum(sum((tempchess==0)));
 % chess_std = std2(tempchess);
-chess_std=0;
+chess_std=0
 t=[1,1,0];
 y=[chess_max chess_space chess_std]*t';
 if chess_space==0 
