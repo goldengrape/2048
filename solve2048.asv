@@ -4,9 +4,10 @@ clear all
 close all
 chess=2.^(reshape(randperm(16),4,4)<=2);
 oldchess=chess;
-chess
+chess=log2(chess);
 for m=1:5000
     m
+    mmax(max(chess))
     for test=1:200
         predict_step=5;
         thismove=floor(rand(1,predict_step).*4+1);
@@ -35,4 +36,5 @@ for m=1:5000
     nextchess=movechess(chess,bestmove(m));
     chess=nextchess;
 end
+chess=2.^chess;
 displaychess(chess)

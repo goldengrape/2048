@@ -20,7 +20,8 @@ for k=3:-1:1
 end
 %% move in new number
 add_position=randperm(4);
-add_number=floor(rand()*2+1);
+%add_number=floor(rand()*2+1);
+add_number=1;
 for i=1:4
     if chess(1,add_position(i))==0
         chess(1,add_position(i))=add_number;

@@ -7,8 +7,9 @@ oldchess=chess;
 chess=log2(chess);
 for m=1:5000
     m
-    for test=1:200
-        predict_step=5;
+    chessmax(m)=max(max(chess));
+    for test=1:100
+        predict_step=10;
         thismove=floor(rand(1,predict_step).*4+1);
         firstmove=thismove(1);
         testchess=chess;
